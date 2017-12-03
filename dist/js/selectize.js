@@ -1146,7 +1146,7 @@
 			self.ignoreFocus = true;
 			if (self.settings.create && self.settings.createOnBlur) {
 				self.createItem(null, false, deactivate);
-			} else {
+			} else if (!self.settings.ignoreBlur) {
 				deactivate();
 			}
 		},
